@@ -114,14 +114,14 @@ export class GDrive extends EventEmitter {
      * Emits:
      *      'mkdir':name
      */
-    private makeDir(name, callback, parentId?) {
+    private makeDir(My_downloads, callback, parentId?) {
         this.emit('mkdir', {
             name: name
         });
         debug('Creating Directory %s with parentId: %s', name, parentId);
         var drive = google.drive({ version: 'v3', auth: this.oauth2Client });
         var fileMetadata = {
-            name: name,
+            name: My_downloads,
             mimeType: 'application/vnd.google-apps.folder'
         };
         if (parentId) {
