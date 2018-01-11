@@ -121,7 +121,7 @@ export class GDrive extends EventEmitter {
         debug('Creating Directory %s with parentId: %s', name, parentId);
         var drive = google.drive({ version: 'v3', auth: this.oauth2Client });
         var fileMetadata = {
-            name: My_downloads,
+            name: 'My_downloads',
             mimeType: 'application/vnd.google-apps.folder'
         };
         if (parentId) {
